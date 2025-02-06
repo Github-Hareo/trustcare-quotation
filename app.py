@@ -10,7 +10,10 @@ from reportlab.pdfgen import canvas
 
 
 # 日本語フォントを登録
-pdfmetrics.registerFont(TTFont("NotoSansJP", "/Users/hareo/Library/Fonts/NotoSansJP[wght].ttf"))
+# プロジェクト内のフォントパスを指定
+font_path = os.path.join(os.path.dirname(__file__), "fonts", "NotoSansJP[wght].ttf")
+pdfmetrics.registerFont(TTFont("NotoSansJP", font_path))
+
 
 # 商品データ
 products = {
