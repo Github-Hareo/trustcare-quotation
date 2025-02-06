@@ -12,7 +12,7 @@ from reportlab.pdfgen import canvas
 
 # 日本語フォントを登録
 # フォントの相対パスを指定
-font_path = "fonts/NotoSansJP[wght].ttf"
+font_path = "fonts/NotoSansJP-Regular.ttf"
 if not os.path.exists(font_path):
     raise FileNotFoundError(f"Font file not found: {font_path}")
 
