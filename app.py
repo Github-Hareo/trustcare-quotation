@@ -10,8 +10,11 @@ from reportlab.pdfgen import canvas
 
 
 # 日本語フォントを登録
-# プロジェクト内のフォントパスを指定
-font_path = os.path.join(os.path.dirname(__file__), "fonts", "NotoSansJP[wght].ttf")
+# フォントの相対パスを指定
+font_path = "fonts/NotoSansJP[wght].ttf"
+if not os.path.exists(font_path):
+    raise FileNotFoundError(f"Font file not found: {font_path}")
+
 pdfmetrics.registerFont(TTFont("NotoSansJP", font_path))
 
 
