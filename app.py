@@ -36,10 +36,11 @@ products = {
 }
 
 # ディスカウントルール
-discounts = {10: 1.0, 49: 0.97, 100: 0.95}
+discounts = {10: 1.0, 49: 1.00, 100: 1.00}
+#discounts = {10: 1.0, 49: 0.97, 100: 0.95}
 
 # Streamlit UI
-st.title("TrustCare 見積計算アプリ")
+st.title("TrustCare Family お見積計算")
 
 # 数量選択
 quantities = {}
@@ -66,7 +67,7 @@ df["割引後価格"] = df.apply(lambda x: apply_discount(x["数量"], x["小計
 total_price = df["割引後価格"].sum()
 
 # 結果表示
-st.subheader("見積計算結果")
+st.subheader("お見積計算結果")
 st.dataframe(df[["名称", "単価 (¥)", "数量", "小計", "割引後価格"]])
 st.write(f"### **合計金額: ¥{total_price:,.0f}**")
 
