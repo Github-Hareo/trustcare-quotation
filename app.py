@@ -40,7 +40,7 @@ discounts = {10: 1.0, 49: 1.00, 100: 1.00}
 #discounts = {10: 1.0, 49: 0.97, 100: 0.95}
 
 # Streamlit UI
-st.title("TrustCare Family お見積計算")
+st.title("TrustCare Family お見積")
 
 # 数量選択
 quantities = {}
